@@ -7,16 +7,18 @@ namespace Model
 {
     public class Auto
     {
-        public Auto(string modelName, string color, int maxSpeed, int price, double fuelConsuption)
+        public Auto(string model, string name, string color, int maxSpeed, int price, double fuelConsuption)
         {
-            ModelName = modelName;
+            Model = model;
+            Name = name;
             Color = color;
             MaxSpeed = maxSpeed;
             Price = price;
             FuelConsuption = fuelConsuption;
         }
 
-        public string ModelName { get; set; }
+        public string Model { get; set; }
+        public string Name { get; set; }
         public string Color { get; set; }
         public int MaxSpeed { get; set; }
         public int Price { get; set; }

@@ -35,17 +35,19 @@ namespace lab3
                 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            string Color = tbColor.Text; // инициализация переменной ModelName считанным словом
-            string ModelName = tbName.Text;
-            int MaxSpeed = Convert.ToInt32(tbMS.Text); // инициализация переменной MaxCargo считанным словом
-            int Price = Convert.ToInt32(tbP.Text); // инициализация переменной Passangers считанным словом
-            double FuelConsuption = Convert.ToDouble(tbFC.Text); // инициализация переменной FuelLoad считанным словом
-            Auto infAuto = new Auto(ModelName, Color, MaxSpeed, Price, FuelConsuption);
+            string Color = tbColor.Text;
+            string Model = tbModel.Text;
+            string Name = tbName.Text;
+            int MaxSpeed = Convert.ToInt32(tbMS.Text); 
+            int Price = Convert.ToInt32(tbP.Text); 
+            double FuelConsuption = Convert.ToDouble(tbFC.Text); 
+            Auto infAuto = new Auto(Model, Name, Color, MaxSpeed, Price, FuelConsuption);
 
             repository.Add(infAuto);
             
             Close();
         }
+
             private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
